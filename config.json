@@ -1,0 +1,44 @@
+{
+  "base_url": "https://127.0.0.1:8000",
+  "httpc_params": {
+    "verify": false
+  },
+  "clients": {
+    "oidc-test-client": {
+      "metadata": {
+        "client_id": "APP-579BA47A-20A9-44ED-BA65-C58F853F574D",
+        "redirect_uris": [
+          "https://127.0.0.1:8000/redirect"
+        ]
+      },
+      "client_secret": "SQI8f71GYDcrUpcfuseHEQkuEqCi9wN5anH1n8Lporv6hglOhZrQligiMSAczP9Q",
+      "issuer": "https://proxy.aai.geant.org",
+      "usage": {
+        "scope": [
+          "openid",
+          "aarc"
+        ]
+      },
+      "behaviour": {
+        "contacts": [
+          "smalihaider@gmail.com"
+        ],
+        "response_types": [
+          "code"
+        ],
+        "token_endpoint_auth_methods": [
+          "client_secret_post"
+        ]
+      },
+      "add_ons": {
+        "pkce": {
+          "function": "idpyoidc.client.oauth2.add_on.pkce.add_support",
+          "kwargs": {
+            "code_challenge_length": 64,
+            "code_challenge_method": "S256"
+          }
+        }
+      }
+    }
+  }
+}

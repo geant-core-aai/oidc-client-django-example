@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        OIDC Test Client
+    </title>
+
+    <style>
+        .btn-style {
+        background-color: white;
+        border: 2px solid black;
+        color: green;
+        padding: 5px 10px;
+        text-align: center;
+        display: inline-block;
+        font-size: 20px;
+        margin: 2px 2px;
+        cursor: pointer;
+        }
+
+        body {
+            font: normal 16px Verdana, Arial, sans-serif; background-color: #F1F1F1;
+        }
+    </style>
+</head>
+
+<body>
+<h1>Test OIDC Client</h1>
+<a href="{{authorization_url}}">
+    <button class="btn-style" type="submit">
+        Authorize
+    </button>
+</a>
+</body>
+
+</html>
